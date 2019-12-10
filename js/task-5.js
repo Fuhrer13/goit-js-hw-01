@@ -1,54 +1,41 @@
-const china = {
-    name: 'китай',
-    delivery: 100
-};
+const deliveryChina = 100;
+const deliveryChile = 250;
+const deliveryAustralia = 170;
+const deliveryIndia = 80;
+const deliveryJamaica = 120;
 
-const chile = {
-    name: 'чили',
-    delivery: 250
-};
+const china = 'китай';
+const chile = 'чили';
+const australia = 'австралия';
+const india = 'индия';
+const jamaica = 'ямайка';
 
-const australia = {
-    name: 'австралия',
-    delivery: 170
-};
+let country = prompt('Enter your country');
 
-const india = {
-    name: 'индия',
-    delivery: 180
-};
-
-const jamaica = {
-    name: 'ямайка',
-    delivery: 120
-};
-
-let country = prompt('Enter your country')
-let userAnswer = country;
-
-if (userAnswer === null) {
-    alert('Try again');
-    
-} else (userAnswer = country.toLowerCase())
-switch (userAnswer) {
-        case 'китай':
-            alert(`Доставка в ${china.name} будет стоить ${china.delivery} кредитов`);
-            break;
-        case 'чили':
-            alert(`Доставка в ${chile.name} будет стоить ${chile.delivery} кредитов`);
-            break;
-        case 'австралия':
-            alert(`Доставка в ${australia.name} будет стоить ${australia.delivery} кредитов`);
-            break;
-        case 'индия':
-            alert(`Доставка в ${india.name} будет стоить ${india.delivery} кредитов`);
-            break;
-        case 'ямайка':
-            alert(`Доставка в ${jamaica.name} будет стоить ${jamaica.delivery} кредитов`);
-            break;
-        default:
-            alert(`В вашей стране доставка не доступна`);
-            break;
-    }
-
-
+if (country === null) {
+  alert('Try again');
+} else {
+  country = country.toLowerCase();
+  switch (country) {
+    case 'китай':
+      alert(`Доставка в ${china} будет стоить ${deliveryChina} кредитов`);
+      break;
+    case 'чили':
+      alert(`Доставка в ${chile} будет стоить ${deliveryChile} кредитов`);
+      break;
+    case 'австралия':
+      alert(
+        `Доставка в ${australia} будет стоить ${deliveryAustralia} кредитов`,
+      );
+      break;
+    case 'индия':
+      alert(`Доставка в ${india} будет стоить ${deliveryIndia} кредитов`);
+      break;
+    case 'ямайка':
+      alert(`Доставка в ${jamaica} будет стоить ${deliveryJamaica} кредитов`);
+      break;
+    default:
+      alert(`В вашей стране доставка не доступна`);
+      break;
+  }
+}
